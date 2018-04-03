@@ -7,6 +7,9 @@ const openBrowser = require('react-dev-utils/openBrowser');
 const paths = require('./paths');
 let isFirstBrowserOpen = true;
 
+process.env.NODE_ENV = 'development';
+process.env.BABEL_ENV = 'development';
+
 module.exports = merge(commonConfig, {
   entry: [
     // require.resolve('react-dev-utils/webpackHotDevClient'),

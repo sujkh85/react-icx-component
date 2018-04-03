@@ -4,6 +4,9 @@ const {resolve} = require('path');
 const commonConfig = require('./common');
 const paths = require('./paths');
 
+process.env.NODE_ENV = 'production';
+process.env.BABEL_ENV = 'production';
+
 module.exports = merge(commonConfig, {
   entry: [
     paths.appIndexJs,// the entry point of our app

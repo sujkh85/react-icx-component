@@ -1,7 +1,7 @@
 {
-  "name": "react-webpack-babel-starter",
-  "version": "0.1.0",
-  "description": "Starter kit for React, Webpack (with Hot Module Replacement) and Babel.",
+  "name": "react-icx-component",
+  "version": "0.0.1",
+  "description": "ICX UI COMPONENT",
   "keywords": [
     "react",
     "webpack",
@@ -11,23 +11,20 @@
     "starter",
     "boilerplate"
   ],
-  "author": "Viktor Persson",
+  "author": "sujkh85",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/vikpe/react-webpack-babel-starter.git"
+    "url": "git+https://github.com/sujkh85/react-icx-component.git"
   },
-  "bugs": {
-    "url": "https://github.com/vikpe/react-webpack-babel-starter/issues"
-  },
-  "homepage": "https://github.com/vikpe/react-webpack-babel-starter",
+  "email":"wjdrudghks85@gmail.com",
   "scripts": {
     "build": "npm run clean-dist && webpack -p --config=configs/webpack/prod",
     "clean-dist": "rm -f -r -d dist",
     "lint": "npm run lint:js && npm run lint:sass",
     "lint:js": "jshint",
     "lint:sass": "stylelint ./src/**/*.scss",
-    "start": "npm run start-dev",
+    "start": "export NODE_ENV=development && export BABEL_ENV=development && npm run start-dev",
     "start-dev": "webpack-dev-server --config=configs/webpack/dev",
     "start-prod": "npm run build && node express.js",
     "test": "jest --watch --coverage --config=configs/jest.json"

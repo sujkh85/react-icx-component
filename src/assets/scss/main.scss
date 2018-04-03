@@ -1,0 +1,24 @@
+
+.main-icx-header{
+  margin:0px auto;
+  text-align: center;
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  height: 50px;
+}
+
+.main-icx-body-container{
+  padding: 50px 0 50px 0;
+  margin:0px auto 0px;
+  text-align: center;
+  width: 100%;
+  height: calc(100% - 100px);
+}
+
+.main-icx-footer{
+  margin:32px auto 0px;
+  position: fixed;
+  bottom: 0px;
+  text-align: center;
+}
