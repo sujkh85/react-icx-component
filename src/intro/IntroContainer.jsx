@@ -1,10 +1,10 @@
 import React from 'react';
-import MainRouter from './MainRouter';
+import IntroRouter from './IntroRouter';
 
 const MainContainer = (props) => {
 	return (
 		<div>
-			<MainRouter {...props}/>
+			<IntroRouter {...props}/>
 		</div>
 	);
 };

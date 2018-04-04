@@ -18,3 +18,14 @@ body{
   margin: 0;
   overflow: auto;
 }
+
+.icon-body{
+  display: flex;
+  .icon-main-menu-container{
+    flex:1;
+    max-width: 200px;
+  }
+  .icon-content-container{
+    flex:5;
+  }
+}
