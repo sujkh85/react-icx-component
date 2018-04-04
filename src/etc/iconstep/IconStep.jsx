@@ -14,11 +14,11 @@ class StepList extends Component {
   }
 
   render() {
-    const {list=['1', '2'], description, step=0} = this.props;
+    const {stepList=['1', '2'], descriptionList, step=0} = this.props;
     return (
       <div className="icon-step"> {/* step (진행 단계도) */}
         <div className="icon-step-container">
-          {list.map((item, index)=>{
+          {stepList.map((item, index)=>{
             return(
               <div className={this.getStepClassName(index)} key={index}> {/* 완료된 step-list에게는 done 클래스 */}
                 <div className="icon-step-title">{item}</div>
@@ -27,8 +27,8 @@ class StepList extends Component {
             )
           })}
         </div>
-        {description && <div className="icon-step-description">  {/* 현재 진행 중인 단계의 설명 */}
-          {description[step]}
+        {descriptionList && <div className="icon-step-description">  {/* 현재 진행 중인 단계의 설명 */}
+          {descriptionList[step]}
         </div>}
       </div>
     );
