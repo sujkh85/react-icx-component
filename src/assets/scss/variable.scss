@@ -2,6 +2,12 @@
 $path-image: '../img/';
 $path-font: '../fonts/';
 
+// COLOR
+$color-main: #00bfc1;
+$color-main-shadow: rgba(26, 165, 167, 0.37);
+$color-tooltip: rgba(57, 57, 57, 0.66);
+$color-login-bg: #f6fbff;
+
 @mixin ellipsis ($lines: 1) {
   @if ($lines == 1) {
       overflow: hidden;

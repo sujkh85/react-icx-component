@@ -1,0 +1,138 @@
+
+.icon-step {
+  
+
+  .icon-step-description {
+    margin-top: 18px;
+    text-align: center;
+    font-size: 15px;
+    letter-spacing: -0.025rem; 
+  }
+
+}
+
+.icon-step-container {
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center;
+}
+
+.icon-step-list {
+  display: inline-block;
+  position: relative;
+  //width: auto;
+  width: 116px;
+  padding: 0 10px;
+  text-align: center;
+
+    &:before { //요소의 선 (왼쪽)
+      display: block;
+      position: absolute;
+      bottom: 8px;
+      left: 0;
+      width: 50%;
+      height: 2px;
+      background-color: #ebe8e4;
+      content: '';
+    }
+
+    &:after { //요소의 선 (오른쪽)
+      display: block;
+      position: absolute;
+      bottom: 8px;
+      left: 100%;
+      width: 50%;
+      height: 2px;
+      margin-left: -50%;
+      background-color: #ebe8e4;
+      content: '';
+    }
+
+    &:first-child {
+      padding-left: 0;
+    }
+
+    &:last-child {
+      padding-right: 0;
+
+      .icon-step-title {
+        margin-left: -2px;
+      }
+    }
+
+    &:first-child:before { //첫번째 단계의 왼쪽 선 숨기기
+      display: none;
+    }
+
+    &:last-child:after { //마지막 단계의 오른쪽 선 숨기기
+      display: none;
+    } 
+
+    &.on {
+      
+      &:before { //활성화된 단계의 왼쪽 선 색을 바꿈
+        background-color: $color-main;
+      }
+
+      .icon-step-title { //활성화된 단계의 타이틀을 강조
+        color: $color-main;
+      }
+
+      .icon-step-circle { //활성화 된 딘계를 크게 함
+        background-color: $color-main;
+        box-shadow: 0 3px 10px $color-main-shadow;
+        transform: scale(1.35);
+
+        &:after {
+          width: 40%;
+          height: 40%;
+        }
+      }
+    }
+
+    &.done { //이미 완료한 단계의 선 및 원 색을 바꿈
+      &:before {
+        background-color: $color-main;
+      }
+      &:after {
+        background-color: $color-main;
+      }
+      .icon-step-circle {
+        background-color: $color-main;
+      }
+    }
+
+  .icon-step-title {
+    position: relative;
+    width: 100%;
+    margin-bottom: 6px;
+    font-size: 11px;
+    color: #808487;
+
+  }
+
+  .icon-step-circle {
+    z-index: 1;
+    position: relative;
+    left: 50%;
+    width: 16px;
+    height: 16px;
+    margin-left: -10px;
+    background-color: #ebe8e4;
+    border-radius: 50%;
+
+    &:after {
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 45%;
+      height: 45%;
+      transform: translateX(-50%) translateY(-50%);
+      background-color: #fff;
+      content: '';
+      border-radius: 50%;
+    }
+  }
+
+}
