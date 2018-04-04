@@ -3,7 +3,7 @@ import React, { PureComponent } from 'react';
 class MainFooter extends PureComponent {
   render() {
     return (
-      <div className="main-icx-footer">
+      <div className="intro-icx-footer">
         MainFooter
       </div>
     );

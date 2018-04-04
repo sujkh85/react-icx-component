@@ -7,7 +7,7 @@ class MainBody extends PureComponent {
 
   render() {
     return (
-      <div className="main-icx-body-container">
+      <div className="intro-icx-body-container">
         <section>
           <h1>HELLO ICX COMPONENT</h1>
           <h2 onClick={this.onClickDemo}>Enter Demo</h2>

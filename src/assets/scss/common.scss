@@ -120,5 +120,61 @@ body{
 }
 
 .icon-main-menu-container{
-  background-color: burlywood;
+  background-color: #ecf4f5;
+  box-sizing: border-box;
+  padding:10px;
+
+  .contract-category {
+    display: block;
+    margin-top: 10px;
+    // margin-left: 30px;
+    margin-bottom: 20px;
+    width: 100%;
+    font-size: 15px;
+    @include font-sub;
+    border-bottom: 2px solid #323232;
+    box-sizing: border-box;
+  
+    .contract-tab {
+        position: relative;
+        display: inline-block;
+        width: 100%;
+        color: #4c4c4c;
+        vertical-align: middle;
+        padding: 10px 0;
+        text-align: center;
+        cursor: pointer;
+        overflow: hidden;
+  
+        &:hover {
+            font-weight: 500;
+        }
+  
+        &:after {
+            opacity: 0;
+            display: block;
+            height: 4px;
+            color: #262626;
+            background-color: #323232;
+            margin: 4px auto;
+            position: absolute;
+            width: 100%;
+            left: 0;
+            bottom: -5px;
+            transform: translateY(5px);
+            content: '';
+            transition: all .2s;
+        }
+    }
+    .contract-tab.on {
+        font-weight: 600;
+  
+        &:after {
+            opacity: 1;
+            transform: translateY(0px);
+            transition: all .2s;
+        }
+    }
+  }
 }
+

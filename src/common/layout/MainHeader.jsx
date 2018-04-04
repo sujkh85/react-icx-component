@@ -4,7 +4,7 @@ export default ()=>{
   return(
     <div className="icon-main-header">
       <div className="icon-main-header-text">
-        REACT-ICON-COMPONENT
+        REACT-ICX-COMPONENT
       </div>
     </div>
   )

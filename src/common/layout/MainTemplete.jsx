@@ -10,7 +10,7 @@ class MainTemplete extends Component {
         <MainHeader/>
         <div className="icon-body-container">
           <div className="icon-body">
-            <MainMenu/>
+            <MainMenu {...this.props}/>
             <div className="icon-content-container">
               {this.props.children}
             </div>
