@@ -8,7 +8,7 @@ class Main extends React.PureComponent {
     return (
       <div>
         <MainHeader/>
-        <MainBody/>
+        <MainBody {...this.props}/>
         <MainFooter/>
       </div>
     );
