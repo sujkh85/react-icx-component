@@ -47,6 +47,8 @@ body{
     height: 100%;
   }
   .icon-main-menu-container{
+    height: 100%;
+    overflow:auto;
     flex:1;
     max-width: 200px;
     min-width: 200px;
