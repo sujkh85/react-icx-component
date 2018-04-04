@@ -19,13 +19,104 @@ body{
   overflow: auto;
 }
 
-.icon-body{
-  display: flex;
+.icon-main-header{
+  width: 100%;
+  height: 70px;
+  background-color:#18afc2;
+  color:#ffffff;
+  display: table;
+  position: fixed;
+  top:0;
+  left:0;
+  .icon-main-header-text{
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 25px;
+    text-align: center;
+  }
+}
+
+.icon-body-container{  
+  padding:70px 0px 0px 0px;
+  width: 100%;
+  height: calc(100vh - 70px);
+  overflow: auto;
+  box-sizing: border-box;
+  .icon-body{
+    display: flex;
+    height: 100%;
+  }
   .icon-main-menu-container{
     flex:1;
     max-width: 200px;
+    min-width: 200px;
   }
   .icon-content-container{
     flex:5;
+    box-sizing: border-box;
+    margin: 20px;
   }
+}
+
+.icon-footer-container{
+  position: relative;
+}
+
+.myico-footer,
+.icop-footer {
+  height: 70px;
+  font-size: 13px;
+  line-height: 70px;
+  color: #292a2f;
+  background-color: #00a7bb;
+
+  &.footer-myico {
+    color: #00717f;
+    background-color: #dde4ef;
+
+    .footer-right .footer-right-link {
+      color: #14717e;
+    }
+  }
+  .footer-left{
+    margin: 0;
+    position: absolute;
+    top: 0%;
+    left: 20px;
+  }
+  .footer-right {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    margin-top: -10px;
+    padding-top: 1px; //자식 요소 focus시 outline이 어긋나는 문제 해결용
+    box-sizing: border-box;
+    height: 20px;
+
+    &:after {
+      display: block;
+      content: '';
+      clear: both;
+    }
+
+    .footer-right-link {
+      float: left;
+      color: #292a2f;
+      font-size: 13px;
+      text-decoration: none;
+      margin-top: 1px;
+      margin-left: 20px;
+      margin-right: 1px;
+      
+      
+      &:first-child {
+        margin-left: 1px;
+      }
+    }
+
+  }
+}
+
+.icon-main-menu-container{
+  background-color: burlywood;
 }

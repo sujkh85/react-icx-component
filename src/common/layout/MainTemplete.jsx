@@ -8,10 +8,12 @@ class MainTemplete extends Component {
     return (
       <div className="icon-wrap">
         <MainHeader/>
-        <div className="icon-body">
-          <MainMenu/>
-          <div className="icon-content-container">
-            {this.props.children}
+        <div className="icon-body-container">
+          <div className="icon-body">
+            <MainMenu/>
+            <div className="icon-content-container">
+              {this.props.children}
+            </div>
           </div>
         </div>
         <MainFooter/>

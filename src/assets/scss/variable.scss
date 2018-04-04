@@ -8,6 +8,18 @@ $color-main-shadow: rgba(26, 165, 167, 0.37);
 $color-tooltip: rgba(57, 57, 57, 0.66);
 $color-login-bg: #f6fbff;
 
+//////////////////
+/// MIXIN TIME ///
+//////////////////
+
+@mixin font-main {
+    font-family: 'Noto Sans',  AppleGothic, sans-serif, Helvetica;
+  }
+  
+@mixin font-sub {
+    font-family: 'Gotham', 'Noto Sans', AppleGothic, sans-serif, Helvetica;
+}
+
 @mixin ellipsis ($lines: 1) {
   @if ($lines == 1) {
       overflow: hidden;
