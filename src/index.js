@@ -5,11 +5,7 @@ import App from "./App";
 import 'babel-polyfill';
 
 const renderComponent = (Component) => {
-    ReactDOM.render(
-        
-            <Component/>
-        ,
-        document.getElementById("root")
+    ReactDOM.render(<Component/>, document.getElementById("root")
     );
 };
 
