@@ -177,3 +177,293 @@ body{
     }
   }
 }
+
+.icon-component-container{
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.icon-property-table-container{
+  table{
+    width:100%;
+    thead{
+      background-color:#fff;
+      border-top:1px solid #ccc;
+    }
+    
+  }
+}
+
+.icon-table-style-details {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+  word-break: keep-all;
+  
+  .icon-properties{
+    padding:10px;
+    font-weight: bold;
+    font-size: 16px;
+  }
+  table{
+    width: 100%;
+  }
+  colgroup {
+
+    $td-width: 150px, 50px, 60px, 100px, 400px;
+    @each $value in $td-width {
+        $index:index($td-width, $value);
+        col:nth-child(#{$index}){
+            width: $value;
+        }
+    }
+  }
+
+  &.table-whiteListRegi {
+
+    colgroup {
+      col {
+        width: 30%;
+      }
+
+      col:first-child {
+        width: 70px !important;
+      }
+
+      col:last-child {
+        width: 70px !important;
+      }
+  
+    }
+
+    tbody tr  {
+
+      &:hover {
+        .button-style-delete {
+          opacity: 1;
+        }
+      }
+
+      td {
+        padding: 11px;
+
+        div {
+          height: auto;
+        }
+      }
+
+      .input-style-inTable {
+        width: 80%;
+      }
+      .whiteList-value {
+        width: 80%;
+        display: inline-block;
+        padding: 3px 12px 3px 3px;
+        text-align: right;
+        font-size: 15px;
+        vertical-align: middle;
+      }
+      .unit {
+        width: 20%;
+        margin-left: 8px;
+        font-weight: 600;
+        vertical-align: middle;
+        color: #4b4b4b;
+      }
+      .button-style-delete {
+        opacity: 0;
+        margin: 0 auto !important;
+
+      }
+    }
+
+    & + .table-whiteListRegi-upload {
+      position: relative;
+      height: 80px;
+      .small-alert {
+        position: absolute;
+        left: 110px;
+      }
+      .details-btn-tableUpload {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-left: -13px;
+        margin-top: -13px;
+        // background-image: url(#{$path-image}icon-arrow-double-down.png) !important;
+      }
+      .details-control {
+        position: absolute;
+        top: 50%;
+        right: 0;
+      }
+    }
+
+    &.whiteListRegi-tableBottom {
+      tr td { padding: 6px; }
+    }
+
+  }
+
+  thead {
+    text-align: center;
+    color: #fff;
+    background-color: #979c9c;
+
+    th {
+      position: relative;
+      padding: 10px 0; 
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.04rem;
+
+      & > .checkbox {
+        .checkbox-square {
+          border-color: #eee;
+          transition: background-color .2s;
+
+          &:before,
+          &:after {
+            background-color: #979c9c;
+          }
+        }
+        input[type=checkbox]:checked + .checkbox-square {
+          border-color: #fff !important;
+          background-color: #fff !important;
+          transition: background-color .2s;
+        }
+      }
+
+      a {
+        position: relative;
+        padding-right: 20px;
+
+        &:hover,
+        &:focus {
+          color: #fff;
+          cursor: pointer;
+          outline: 0;
+
+          &:after {
+          color: #323232;
+          }
+        }
+
+
+
+        &:after {
+          position: absolute;
+          top: 5px;
+          right: 0;
+          display: block;
+          margin-left: 11px;
+          content: '▼';
+          font-family: serif;
+          font-size: 8px;
+          color: #5c5c5c;
+          transition: transform .3s, top .3s;
+        }
+      }
+
+      &.on a:after {
+        top: 4px;
+        transform: rotate(180deg);
+        transition: transform .3s, top .3s;
+      }
+    }
+  }
+
+  tbody {
+    text-align: center;
+
+    tr {
+      color: #2e2e2e;
+      td {
+        position: relative;
+        padding: 11px 4px;
+        vertical-align: middle;
+        border-bottom: 1px solid #ccc;
+        transition: background-color .15s;
+        font-size: 14px;
+        &:nth-child(1),&:nth-child(5){
+          text-align: left;
+          margin-left: 10px;
+          padding-left:10px;
+        }
+
+        & > div {
+          height: 36px;
+          font-size: 12px;
+          font-weight: 500;
+          text-align: left;
+          line-height: 1.5;
+          min-height: 18px;
+          @include ellipsis(2);
+          white-space: pre-wrap; word-wrap: break-word;
+        }
+
+        &:last-child {
+          overflow: initial;
+        }
+
+        .button-style-refund {
+          opacity: 0;
+          pointer-events: none;
+          transition: opacity .2s;
+          
+          &:after {
+            opacity: 0;
+            display: block;
+            position: absolute;
+            z-index: 1;
+            //top: 0px;
+            //left: 125%;
+            top: 30px;
+            left: -55%;
+            padding: 3px 7px;
+            font-size: 11px;
+            white-space: nowrap;
+            color: #fff;
+            letter-spacing: 0.03rem;
+            background-color: rgba(57, 57, 57, 0.66) !important;
+            border-radius: 3px;
+            content: attr(data-title);
+            transition: opacity .3s;
+            pointer-events: none;
+          }
+        }
+      }
+
+      &:hover {
+        td {
+          background-color: #efefef;
+          transition: background-color .15s;
+
+          .button-style-refund {
+            opacity: .6;
+            pointer-events: initial !important;
+            transition: opacity .2s;
+
+            &:hover {
+              opacity: 1;
+              &:after {
+                opacity: 1;
+                transition: opacity .3s .22s;
+              }
+            }
+          }
+        }
+      } //end of tr:hover
+    }//end of tr
+
+    .table-refunded {
+      color: #c3c3c3;
+      td {
+        .button-style-refund {
+          display: none;
+        }
+      }
+    }
+  }
+
+}

@@ -4,8 +4,8 @@ import React, { Component } from 'react';
 class Code extends Component {
   getImportRenderer=()=>{
     let importRender= [];
-    const {importFrom} = this.props
-    importFrom.forEach((item, index)=>{
+    const {importFromList} = this.props
+    importFromList.forEach((item, index)=>{
       let key = Object.keys(item)[0]
       let value = item[key]
       importRender.push(
