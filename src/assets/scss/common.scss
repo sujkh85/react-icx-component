@@ -28,6 +28,7 @@ body{
   position: fixed;
   top:0;
   left:0;
+  box-shadow:0 0 30px rgba(119, 90, 90, 0.42);
   .icon-main-header-text{
     display: table-cell;
     vertical-align: middle;
@@ -123,6 +124,7 @@ body{
   background-color: #ecf4f5;
   box-sizing: border-box;
   padding:10px;
+  box-shadow: 0 0 30px rgba(149, 149, 149, 0.42);
 
   .contract-category {
     display: block;
@@ -199,7 +201,8 @@ body{
   border-collapse: collapse;
   table-layout: fixed;
   word-break: keep-all;
-  
+  background-color: #edf0f2;
+  // box-shadow: 0 0 30px rgba(149, 149, 149, 0.42);
   .icon-properties{
     padding:10px;
     font-weight: bold;
@@ -467,3 +470,20 @@ body{
   }
 
 }
+
+.icon-description-container{
+  background-color: #edf0f2;
+  padding:10px;
+  // box-shadow: 0 0 30px rgba(149, 149, 149, 0.42);
+  border-radius: 5px;
+  margin-bottom: 20px;
+  .icon-description-title{
+    font-weight: bold;
+  }
+  .icon-description-content{
+    padding-left: 18px;
+    padding-top:10px;
+    font-size: 14px;
+  }
+}
+

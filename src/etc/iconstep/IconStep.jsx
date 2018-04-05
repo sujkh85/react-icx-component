@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class StepList extends Component {
+class IconStep extends Component {
   getStepClassName=(index)=>{
     const {step=0} = this.props;
     let result = ''
@@ -35,4 +35,4 @@ class StepList extends Component {
   }
 }
 
-export default StepList;
+export default IconStep;

@@ -4,6 +4,8 @@ React icx component is ui library
 
 ## It's not an official thing!
 
+All rights are up to Icon.
+
 This project is my hobby.
 
 I will delete it if I have a problem.

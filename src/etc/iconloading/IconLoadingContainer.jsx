@@ -2,12 +2,13 @@ import React, { Component } from 'react';
 import {ShortNoticeContainer, ShortNoticeController} from 'react-short-notice';
 import IconLoading from './IconLoading';
 import MainTemplete from '../../common/layout/MainTemplete';
+import DescriptionTemplete from '../../common/layout/DescriptionTemplete'
 import ComponentTemplete from '../../common/layout/ComponentTemplete';
 import Code from '../../common/Code';
 import PropertyTable from '../../common/PropertyTable';
 
 
-class IconStepContainer extends Component {
+class IconLoadingContainer extends Component {
   importFromList=[
     {React:'react'},
     {'{IconLoading}':'react-icx-component'}
@@ -16,7 +17,7 @@ class IconStepContainer extends Component {
   libraryObject={
     name:'IconLoading',
     param:[
-      {isShow:'true'},
+      {isShow:'{true}'},
       {label:'"처리중입니다.<br/>잠시만 기달려주세요."'}
     ],
   }
@@ -39,13 +40,15 @@ class IconStepContainer extends Component {
           <IconLoading isShow={true} label="잠시만 기달려주세요.<br/>처리중입니다."/>
         </ShortNoticeContainer>
         <ComponentTemplete>
-          <button onClick={this.showLoading}>Click Me</button>
+          <button onClick={this.showLoading} style={{fontSize:15}}>Click Me</button> 
         </ComponentTemplete>
-
+        <DescriptionTemplete>
+          api호출시 대기 시간동안 Loading을 보여줄때 사용합니다.
+        </DescriptionTemplete>
         <PropertyTable propertyTableList={this.propertyTableList}/>
       </MainTemplete>
     );
   }
 }
 
-export default IconStepContainer;
+export default IconLoadingContainer;
