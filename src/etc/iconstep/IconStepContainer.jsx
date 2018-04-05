@@ -1,10 +1,7 @@
 import React, { Component } from 'react';
-// import IconStep from './IconStep';
+import IconStep from './IconStep';
 import MainTemplete from '../../common/layout/MainTemplete';
 import Code from '../../common/Code';
-import IconStep from '../../build/index'
-
-console.log('IconStep', IconStep)
 
 class IconStepContainer extends Component {
   render() {
@@ -14,7 +11,7 @@ class IconStepContainer extends Component {
           <Code>
             {"<IconStep stepList={['step1', 'step2', 'step3']} descriptionList={['description1','description2','description3']} step={1}/>"}
           </Code>
-          {/* <IconStep stepList={['step1', 'step2', 'step3']} descriptionList={['description1','description2','description3']} step={1}/> */}
+          <IconStep stepList={['step1', 'step2', 'step3']} descriptionList={['description1','description2','description3']} step={1}/>
         </div>
       </MainTemplete>
     );

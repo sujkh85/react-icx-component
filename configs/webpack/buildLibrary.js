@@ -56,13 +56,16 @@ const commonConfig = {
 
 
 module.exports = merge(commonConfig, {
-  entry: paths.libraryBuildPath,
+  entry: {
+    'index.js':paths.libraryBuildPath,
+    'index.css':paths.appStyleCss
+  },
   devtool: 'source-map',
   output: {
-    filename: 'index.js',
+    filename: '[name]',
     path: resolve(__dirname, '../../build'),
     publicPath: './',
-    library: 'index',
+    library: 'react-icx-component',
     libraryTarget: 'umd',
     umdNamedDefine: true
   },
