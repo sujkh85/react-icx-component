@@ -1,0 +1,151 @@
+//로딩
+
+//Animation
+@keyframes spin {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes bounce-circle-01 {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  20% {
+    transform: translate3d(6px, -4px, 0);
+  }
+  35% {
+    transform: translate3d(0, 0, 0);
+  }
+  60% {
+    transform: translate3d(6px, -4px, 0);
+  }
+  75% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes bounce-circle-02 {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  20% {
+    transform: translate3d(-6px, 4px, 0);
+  }
+  35% {
+    transform: translate3d(0, 0, 0);
+  }
+  60% {
+    transform: translate3d(-6px, 4px, 0);
+  }
+  75% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.icon-loading-dim {
+  z-index: 500; //불필요시 삭제!
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(207, 207, 207, 0.5);
+  
+}
+
+.icon-loading-box {
+
+  $loading-size: 300px;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: $loading-size;
+  height: $loading-size;
+  margin-top: -($loading-size/2);
+  margin-left: -($loading-size/2);
+  background-color: #fff;
+  //border-radius: 50%;
+  border-radius: 14px;
+  box-shadow: 0 23px 39px -20px rgba(0,0,0,.43);
+}
+
+.icon-loading-image {
+  
+  $icon-size: 54px;
+  $icon-border-width: 16px;
+  $icon-circle-size: 19px;
+  $color-main: #00bfc1;
+  $color-stick: #fff;
+
+
+  position: absolute;
+  width: 124px;
+  height: 106px;
+  top: 60px;
+  left: 50%;
+  margin-left: -62px;
+
+  .icon-loading-image-icon {
+    position: relative;
+    top: 10px;
+    left: 20px;
+    width: $icon-size;
+    height: $icon-size;
+    border: $icon-border-width solid $color-main;
+    border-radius: 50%;
+
+    animation: spin 2s infinite;
+
+    &:before {
+      position: absolute;
+      top: -25px;
+      left: 20px;
+      width: 12px;
+      height: ($icon-size*2);
+      transform: rotate(45deg);
+      background-color: $color-stick;
+      content: '';
+    }
+  }
+
+  .icon-loading-image-circle {
+    width: $icon-circle-size;
+    height: $icon-circle-size;
+    background-color: $color-main;
+    border-radius: 50%;
+    
+    &.one {   
+      position: absolute;
+      top: 4px;
+      right: 12px;
+      animation: bounce-circle-01 1.2s infinite;
+    }
+    
+    &.two {
+      position: absolute;
+      bottom: 4px;
+      left: 12px;
+      animation: bounce-circle-02 1.2s infinite;
+      
+    }
+  
+  }
+
+}
+
+.icon-loading-text {
+  position: absolute;
+  bottom: 60px;
+  left: 50%;
+  width: 100%;
+  font-size: 15px;
+  font-weight: 500;
+  color: #5e5e5e;
+  text-align: center;
+  transform: translateX(-50%);
+}

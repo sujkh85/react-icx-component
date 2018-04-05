@@ -6,7 +6,7 @@ class MainMenuItem extends Component {
     const {targetPageName, route="etc/iconstep", label} = this.props
     return (
       <div className={cn('contract-category')} route={route} onClick={this.props.onClickMenu}>
-        <div className={cn('contract-tab',{'on':targetPageName === route})} >
+        <div className={cn('contract-tab',{'on':targetPageName === route})} route={route} >
           {label}
         </div>
       </div>

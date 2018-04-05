@@ -8,7 +8,7 @@ import PropertyTable from '../../common/PropertyTable';
 class IconStepContainer extends Component {
   importFromList=[
     {React:'react'},
-    {IcxComponent:'react-icx-component'}
+    {'{IconStep}':'react-icx-component'}
   ]
 
   libraryObject={
