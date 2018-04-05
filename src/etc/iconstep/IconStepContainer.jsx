@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import IconStep from './IconStep';
 import MainTemplete from '../../common/layout/MainTemplete';
 import ComponentTemplete from '../../common/layout/ComponentTemplete';
+import DescriptionTemplete from '../../common/layout/DescriptionTemplete';
 import Code from '../../common/Code';
 import PropertyTable from '../../common/PropertyTable';
 
@@ -38,6 +39,10 @@ class IconStepContainer extends Component {
             step={1}
           />
         </ComponentTemplete>
+
+        <DescriptionTemplete>
+          stepList와 descriptionList langth가 같이야합니다.
+        </DescriptionTemplete>
 
         <PropertyTable propertyTableList={this.propertyTableList}/>
       </MainTemplete>
