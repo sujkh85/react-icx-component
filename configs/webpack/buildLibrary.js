@@ -1,7 +1,7 @@
 // production config
+
 const merge = require('webpack-merge');
 const {resolve} = require('path');
-// const commonConfig = require('./common');
 const paths = require('./paths');
 
 process.env.NODE_ENV = 'production';
@@ -56,15 +56,17 @@ const commonConfig = {
 
 
 module.exports = merge(commonConfig, {
-  entry: [
-    paths.libraryBuildPath,// the entry point of our app
-    paths.appStyleCss
-  ],
+  entry: paths.libraryBuildPath,
   devtool: 'source-map',
   output: {
     filename: 'index.js',
     path: resolve(__dirname, '../../build'),
     publicPath: './',
+    library: 'index',
+    libraryTarget: 'umd',
+    umdNamedDefine: true
   },
-  plugins: [],
+  plugins: [
+
+  ],
 });
