@@ -31,6 +31,10 @@ class IconStepContainer extends Component {
     return (
       <MainTemplete>
         <Code importFromList={this.importFromList} libraryObject={this.libraryObject}/>
+        
+        <DescriptionTemplete>
+          stepList와 descriptionList langth가 같이야합니다.
+        </DescriptionTemplete>
 
         <ComponentTemplete>
           <IconStep 
@@ -40,9 +44,7 @@ class IconStepContainer extends Component {
           />
         </ComponentTemplete>
 
-        <DescriptionTemplete>
-          stepList와 descriptionList langth가 같이야합니다.
-        </DescriptionTemplete>
+        
 
         <PropertyTable propertyTableList={this.propertyTableList}/>
       </MainTemplete>

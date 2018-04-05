@@ -36,15 +36,17 @@ class IconLoadingContainer extends Component {
       <MainTemplete>
         <Code importFromList={this.importFromList} libraryObject={this.libraryObject}>
         </Code>
-        <ShortNoticeContainer id="iconLoading" timeout="2000">
+        <DescriptionTemplete>
+          api호출시 대기 시간동안 Loading을 보여줄때 사용합니다.<br/>
+          Click Me를 눌러보세요.
+        </DescriptionTemplete>
+        <ShortNoticeContainer id="iconLoading" timeout='2000'>
           <IconLoading isShow={true} label="잠시만 기달려주세요.<br/>처리중입니다."/>
         </ShortNoticeContainer>
         <ComponentTemplete>
           <button onClick={this.showLoading} style={{fontSize:15}}>Click Me</button> 
         </ComponentTemplete>
-        <DescriptionTemplete>
-          api호출시 대기 시간동안 Loading을 보여줄때 사용합니다.
-        </DescriptionTemplete>
+        
         <PropertyTable propertyTableList={this.propertyTableList}/>
       </MainTemplete>
     );

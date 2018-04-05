@@ -202,7 +202,7 @@ body{
   table-layout: fixed;
   word-break: keep-all;
   background-color: #edf0f2;
-  // box-shadow: 0 0 30px rgba(149, 149, 149, 0.42);
+  box-shadow: 0 0 30px rgba(149, 149, 149, 0.42);
   .icon-properties{
     padding:10px;
     font-weight: bold;
@@ -474,7 +474,7 @@ body{
 .icon-description-container{
   background-color: #edf0f2;
   padding:10px;
-  // box-shadow: 0 0 30px rgba(149, 149, 149, 0.42);
+  box-shadow: 0 0 30px rgba(149, 149, 149, 0.42);
   border-radius: 5px;
   margin-bottom: 20px;
   .icon-description-title{
