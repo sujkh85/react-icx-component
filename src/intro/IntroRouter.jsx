@@ -8,7 +8,6 @@ import PageNotFound from '../error/PageNotFound';
 import {QuerySwitch, QueryRoute} from '../library/queryrouter/';
 class IntroRouter extends Component {
 	render() {
-		console.log(this.props)
 		return (
 			<QuerySwitch {...this.props} queryname="pagename">
 				<QueryRoute component={Intro} />

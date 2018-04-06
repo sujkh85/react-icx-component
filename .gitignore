@@ -3,7 +3,7 @@
 
 # production
 /dist/*
-/build/*
+/npmlibrary/*
 
 # misc
 .DS_Store

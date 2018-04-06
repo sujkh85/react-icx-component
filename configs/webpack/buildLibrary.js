@@ -63,7 +63,7 @@ module.exports = merge(commonConfig, {
   devtool: 'source-map',
   output: {
     filename: '[name]',
-    path: resolve(__dirname, '../../build'),
+    path: resolve(__dirname, '../../npmlibrary'),
     publicPath: './',
     library: 'react-icx-component',
     libraryTarget: 'umd',

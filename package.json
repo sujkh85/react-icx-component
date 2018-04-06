@@ -20,9 +20,9 @@
   "email": "wjdrudghks85@gmail.com",
   "scripts": {
     "build": "npm run clean-dist && webpack -p --config=configs/webpack/prod",
-    "library": "npm run clean-build && webpack -p --config=configs/webpack/buildLibrary",
+    "library": "npm run clean-npmlibrary && webpack -p --config=configs/webpack/buildLibrary",
     "clean-dist": "rm -f -r -d dist",
-    "clean-build": "rm -f -r -d build",
+    "clean-npmlibrary": "rm -f -r -d npmlibrary",
     "lint": "npm run lint:js && npm run lint:sass",
     "lint:js": "jshint",
     "lint:sass": "stylelint ./src/**/*.scss",
