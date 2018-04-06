@@ -42,7 +42,7 @@ class IconLoadingContainer extends Component {
           &nbsp;&nbsp;{"<span style={{color:'blue'}}>아이디를 입력해주세요.2</span>"}<br/>
           {'</IconShortNotice>'}<br/><br/>
           {'//IconShortNoticeController.show("notice1")'}<br/>
-          {'//IconShortNoticeController.show("notice2")'}
+          {'//IconShortNoticeController.show("notice2")'}<br/>
         </Code>
         <DescriptionTemplete>
           react-short-notice를 사용하여고 디자인 작업만 입혔습니다.<br/>
