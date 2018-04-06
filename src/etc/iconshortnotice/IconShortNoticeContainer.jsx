@@ -37,12 +37,11 @@ class IconLoadingContainer extends Component {
     return (
       <MainTemplete>
         <Code importFromList={this.importFromList} libraryObject={this.libraryObject}>
-          <br/>
           {'<IconShortNotice id="notice2" timeout="2000">'}<br/>
           &nbsp;&nbsp;{"<span style={{color:'blue'}}>아이디를 입력해주세요.2</span>"}<br/>
           {'</IconShortNotice>'}<br/><br/>
-          {'//IconShortNoticeController.show("notice1")'}<br/>
-          {'//IconShortNoticeController.show("notice2")'}
+          {'<button onClick={()=>{IconShortNoticeController.show("notice1")}}>Click Me1</buuton>'}<br/>
+          {'<button onClick={()=>{IconShortNoticeController.show("notice2")}}>Click Me2</buuton>'}<br/>
         </Code>
         <DescriptionTemplete>
           react-short-notice를 사용하여고 디자인 작업만 입혔습니다.<br/>
