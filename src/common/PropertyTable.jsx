@@ -3,6 +3,9 @@ import React, { Component } from 'react';
 class PropertyTable extends Component {
   render() {
     const {propertyTableList=[]}= this.props 
+    if(propertyTableList.length === 0){
+      return null
+    }
     return (
       <div className="icon-table-style-details">
         <div className="icon-properties">
