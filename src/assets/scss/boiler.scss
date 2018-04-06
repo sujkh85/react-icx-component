@@ -30,20 +30,20 @@ hr {
     border-bottom: 2px dashed rgb(214, 116, 149);
 }
 
-button {
-  @include font-main;
-  display: block;
-  margin: 0;
-  padding: 0;
-  cursor: pointer;
-  border: none;
-  background: none;
+// button {
+//   @include font-main;
+//   display: block;
+//   margin: 0;
+//   padding: 0;
+//   cursor: pointer;
+//   border: none;
+//   background: none;
   
-  &:focus {
-    //outline: 1px dotted #aaa; //180309 제거
-    outline: 0;
-  }
-}
+//   &:focus {
+//     //outline: 1px dotted #aaa; //180309 제거
+//     outline: 0;
+//   }
+// }
 
 caption {
     display: none;

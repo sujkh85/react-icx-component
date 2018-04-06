@@ -18,6 +18,7 @@ class MainMenu extends PureComponent {
         <MainMenuItem label="Step" route="etc/iconstep" targetPageName={targetPageName} onClickMenu={this.onClickMenu}/>
         <MainMenuItem label="Loading" route="etc/iconloading" targetPageName={targetPageName} onClickMenu={this.onClickMenu}/>
         <MainMenuItem label="ShortNotice" route="etc/iconshortnotice" targetPageName={targetPageName} onClickMenu={this.onClickMenu}/>
+        <MainMenuItem label="Buttons" route="button/button" targetPageName={targetPageName} onClickMenu={this.onClickMenu}/>
       </div>
     );
   }

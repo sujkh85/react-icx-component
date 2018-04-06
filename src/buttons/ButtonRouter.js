@@ -8,7 +8,7 @@ class ButtonRouter extends Component {
     return (
       <QuerySwitch {...this.props} queryname="pagename">
         <QueryRoute component={ButtonContainer} />
-        <QueryRoute path="buttons/button" exact component={ButtonContainer} />
+        <QueryRoute path="button/button" exact component={ButtonContainer} />
         <QueryRoute nomatch component={PageNotFound} />
       </QuerySwitch>
     );
