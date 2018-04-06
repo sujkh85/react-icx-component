@@ -37,7 +37,6 @@ class IconLoadingContainer extends Component {
     return (
       <MainTemplete>
         <Code importFromList={this.importFromList} libraryObject={this.libraryObject}>
-          <br/>
           {'<IconShortNotice id="notice2" timeout="2000">'}<br/>
           &nbsp;&nbsp;{"<span style={{color:'blue'}}>아이디를 입력해주세요.2</span>"}<br/>
           {'</IconShortNotice>'}<br/><br/>
