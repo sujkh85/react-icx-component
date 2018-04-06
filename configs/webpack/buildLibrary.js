@@ -3,7 +3,7 @@
 const merge = require('webpack-merge');
 const {resolve} = require('path');
 const paths = require('./paths');
-
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
 process.env.NODE_ENV = 'production';
 process.env.BABEL_ENV = 'production';
 
@@ -20,22 +20,29 @@ const commonConfig = {
         exclude: /node_modules/,
       },
       {
-        test: /\.css$/,
-        use: [
-          'style-loader',
-          {loader: 'css-loader', options: {importLoaders: 1}},
-          'postcss-loader',
-        ],
-      },
-      {
         test: /\.scss$/,
-        loaders: [
-          'style-loader',
-          {loader: 'css-loader', options: {importLoaders: 1}},
-          'postcss-loader',
-          'sass-loader',
-        ],
+        use: ExtractTextPlugin.extract({
+          fallback: 'style-loader',
+          use: ['css-loader', 'sass-loader']
+        })
       },
+      // {
+      //   test: /\.css$/,
+      //   use: [
+      //     'style-loader',
+      //     {loader: 'css-loader', options: {importLoaders: 1}},
+      //     'postcss-loader',
+      //   ],
+      // },
+      // {
+      //   test: /\.scss$/,
+      //   loaders: [
+      //     'style-loader',
+      //     {loader: 'css-loader', options: {importLoaders: 1}},
+      //     'postcss-loader',
+      //     'sass-loader',
+      //   ],
+      // },
       {
         test: /\.(jpe?g|png|gif|svg)$/i,
         loaders: [
@@ -58,7 +65,7 @@ const commonConfig = {
 module.exports = merge(commonConfig, {
   entry: {
     'index.js':paths.libraryBuildPath,
-    'index.css':paths.appStyleCss
+    'main.css':paths.appStyleCss
   },
   devtool: 'source-map',
   output: {
@@ -70,6 +77,6 @@ module.exports = merge(commonConfig, {
     umdNamedDefine: true
   },
   plugins: [
-
+    new ExtractTextPlugin("style.css")
   ],
 });
