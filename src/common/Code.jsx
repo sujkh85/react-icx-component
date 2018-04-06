@@ -52,22 +52,27 @@ class Code extends Component {
                 childrenResultList.push(<span className="blue">{item+' '}</span>)
               }
               else{
-                let splitItemArr = item.split('=');
-                splitItemArr.forEach((innerItem, index)=>{
-                  if(index === 0){
-                    childrenResultList.push(<span className="blue">{innerItem+'='}</span>)
-                  }
-                  else if(index ===1){
-                    let indexTarget = innerItem.indexOf('>')
-                    if(indexTarget === -1){
-                      childrenResultList.push(<span className="red">{innerItem+' '}</span>)
-                    }
-                    else{
-                      childrenResultList.push(<span className="red">{innerItem.substring(0,indexTarget)}</span>)
-                      childrenResultList.push(<span className="blue">{innerItem.substring(indexTarget,innerItem.length)}</span>)
-                    }
-                  }
-                })
+                let itemSubstring1 = item.substring(0, itemIndex+1)
+                let itemSubstring2 = item.substring(itemIndex+1, itemIndex+2)
+                let itemSubstring3 = item.substring(itemIndex+2, item.length)
+
+                childrenResultList.push(<span className="blue">{itemSubstring1}</span>)
+                childrenResultList.push(<span className="red">{itemSubstring2}</span>)
+
+                if(itemSubstring2 === '"'){
+                  let idx = itemSubstring3.indexOf('"')
+                  let itemSubstring3Sub1 = itemSubstring3.substring(0, idx+1)
+                  let itemSubstring3Sub2 = itemSubstring3.substring(idx+1, itemSubstring3.length)
+                  childrenResultList.push(<span className="red">{itemSubstring3Sub1}</span>)
+                  childrenResultList.push(<span className="blue">{itemSubstring3Sub2+ ' '}</span>)
+                }
+                else if(itemSubstring2 === '{'){
+                  let idx = itemSubstring3.lastIndexOf('}')
+                  let itemSubstring3Sub1 = itemSubstring3.substring(0, idx+1)
+                  let itemSubstring3Sub2 = itemSubstring3.substring(idx+1, itemSubstring3.length)
+                  childrenResultList.push(<span className="red">{itemSubstring3Sub1}</span>)
+                  childrenResultList.push(<span className="blue">{itemSubstring3Sub2+ ' '}</span>)
+                }
               }
             })
           }
