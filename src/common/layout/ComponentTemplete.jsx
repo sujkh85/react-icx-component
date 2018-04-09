@@ -17,7 +17,7 @@ const Header = styled.div`
   }
 `
 const Content = styled.div`
-  padding: 14px 24px;
+  padding: 24px;
 `
 
 class ComponentTemplete extends Component {

@@ -73,12 +73,13 @@ class ButtonContainer extends Component {
   render() {
     return (
       <MainTemplete>
-        <DescriptionTemplete title="버튼 컴포넌트">
-          플랫 버튼
+        <DescriptionTemplete title="버튼 - (Flat Button)">
+          간단한 ui 플랫 버튼입니다. 
         </DescriptionTemplete>
-        <Code importFromList={this.importFromList} libraryObject={this.libraryObject}>
-        </Code>
         <ComponentTemplete>
+          <Code importFromList={this.importFromList} libraryObject={this.libraryObject}>
+          </Code>
+          <Divider />
           <FlatButton/>
           <FlatButton label="디폴트"/>
           <FlatButton label="메인" icxStyle="primary"/>
@@ -86,12 +87,13 @@ class ButtonContainer extends Component {
           <FlatButton label="비활성" icxStyle="disabled" disabled/>
         </ComponentTemplete>
         <Divider/>
-        <Code importFromList={this.importFromList2} libraryObject={this.libraryObject2}>
-        </Code>
-        <DescriptionTemplete>
+        <DescriptionTemplete title="버튼 - (Float Button)">
           플로팅 버튼
         </DescriptionTemplete>
         <ComponentTemplete>
+          <Code importFromList={this.importFromList2} libraryObject={this.libraryObject2}>
+          </Code>
+          <Divider/>
           <FloatButton/>
           <FloatButton label="디폴트" onClick={this.onClickBtn}/>
           <ShortNoticeContainer id="iconLoading" timeout='2000'>

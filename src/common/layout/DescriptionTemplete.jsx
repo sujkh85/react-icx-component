@@ -8,7 +8,6 @@ const IconDescriptionContainer = styled.div`
 `
 const Header = styled.div`
   padding: 0 15px;
-  border-bottom: 1px solid #eee;
   & h2 {
     font-size: 20px;
     margin-bottom: 10px;

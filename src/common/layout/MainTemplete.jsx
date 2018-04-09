@@ -27,12 +27,6 @@ class MainTemplete extends Component {
               {this.props.children}
             </div>
           </MainContentContainer>
-          {/* <div className="icon-body-container">
-            <div className="icon-body">
-              <div className="icon-content-container">
-              </div>
-            </div>
-          </div> */}
           <MainFooter/>
         </div>
       </ThemeProvider>
