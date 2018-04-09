@@ -24,7 +24,7 @@ const MainMenuContainer = styled.div`
 class MainMenu extends PureComponent {
   onClickMenu=(e)=>{
     let targetPageName = this.props.location.query.pagename
-    let route = e.target.getAttribute('route')
+    let route = e.currentTarget.getAttribute('route')
     if(route !== targetPageName){
       this.props.history.push(`/?pagename=${route}`)
     }
