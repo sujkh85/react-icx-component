@@ -1,16 +1,14 @@
 {
   "name": "react-icx-component",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "ICX UI COMPONENT",
   "keywords": [
     "react",
-    "webpack",
-    "babel",
-    "sass",
-    "hmr",
-    "starter",
-    "boilerplate"
+    "component",
+    "icx",
+    "ui"
   ],
+  "main": "./npmlibrary/index.js",
   "author": "sujkh85",
   "license": "MIT",
   "repository": {
