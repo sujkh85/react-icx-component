@@ -12,7 +12,7 @@ const MainContentContainer = styled.div`
   padding-left: 256px;
 
   & .icon-body {
-    margin: 48px 72px;
+    margin: 48px 35px;
   }
 `
 class MainTemplete extends Component {

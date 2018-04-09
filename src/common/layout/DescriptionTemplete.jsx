@@ -2,18 +2,16 @@ import React, { Component } from 'react';
 import styled from 'styled-components'
 
 const IconDescriptionContainer = styled.div`
-  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 6px, rgba(0, 0, 0, 0.12) 0px 1px 4px;
-  border-radius: 2px;
-  margin-bottom: 32px;
-
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 0px 10px;
 `
 const Header = styled.div`
-  height: 56px;
   padding: 0 15px;
-  background-color: #eee;
+  border-bottom: 1px solid #eee;
   & h2 {
     font-size: 20px;
-    line-height: 56px;
+    margin-bottom: 10px;
   }
 `
 const Content = styled.div`
@@ -22,13 +20,15 @@ const Content = styled.div`
 
 class DescriptionTemplete extends Component {
   render() {
+    const { title, children } = this.props 
+    console.log(this.props)
     return (
       <IconDescriptionContainer>
         <Header>
-          <h2>Description</h2>
+          <h2>{title}</h2>
         </Header>
         <Content>
-          {this.props.children}
+          <p>{children}</p>
         </Content>
       </IconDescriptionContainer>
     );

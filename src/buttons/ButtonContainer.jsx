@@ -73,11 +73,11 @@ class ButtonContainer extends Component {
   render() {
     return (
       <MainTemplete>
-        <Code importFromList={this.importFromList} libraryObject={this.libraryObject}>
-        </Code>
-        <DescriptionTemplete>
+        <DescriptionTemplete title="버튼 컴포넌트">
           플랫 버튼
         </DescriptionTemplete>
+        <Code importFromList={this.importFromList} libraryObject={this.libraryObject}>
+        </Code>
         <ComponentTemplete>
           <FlatButton/>
           <FlatButton label="디폴트"/>

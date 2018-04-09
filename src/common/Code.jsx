@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import styled from '.'
 // import Clipboard from 'react-clipboard.js';
 
 class Code extends Component {
@@ -104,10 +105,19 @@ class Code extends Component {
     return childrenResultList;
   }
 
+  
   render() {
     let childrenResultList = this.getCodeChildrunRenderer();
+    const IconCodeContainer = styled.div`
+      width: 100%;
+      font-size: 14px;
+      background-color: #f6f8fa;
+      padding: 10px;
+      margin: 10px 0px;
+      box-sizing: border-box;
+    `
     return (
-      <div className="icon-code-container">
+      <IconCodeContainer>
         <code>
           {this.getImportRenderer()}<br/>
           {this.getLibraryObjectRenderer()}
@@ -116,7 +126,7 @@ class Code extends Component {
           {/* {this.props.children}<br/><br/> */}
           {childrenResultList}
         </code>
-      </div>
+      </IconCodeContainer>
     );
   }
 }
