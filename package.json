@@ -26,7 +26,7 @@
     "lint": "npm run lint:js && npm run lint:sass",
     "lint:js": "jshint",
     "lint:sass": "stylelint ./src/**/*.scss",
-    "start": "export NODE_ENV=development && export BABEL_ENV=development && npm run start-dev",
+    "start": "cross-env NODE_ENV=development && cross-env BABEL_ENV=development && npm run start-dev",
     "start-dev": "webpack-dev-server --config=configs/webpack/dev",
     "start-prod": "npm run build && node express.js",
     "test": "jest --watch --coverage --config=configs/jest.json"
@@ -46,6 +46,7 @@
     "babel-preset-react-app": "^3.1.1",
     "babel-preset-stage-0": "^6.24.1",
     "babel-runtime": "^6.26.0",
+    "cross-env": "^5.1.4",
     "css-loader": "^0.28.9",
     "eslint": "^4.19.1",
     "eslint-config-react-app": "^2.1.0",

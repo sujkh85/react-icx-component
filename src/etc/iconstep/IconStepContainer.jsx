@@ -44,8 +44,6 @@ class IconStepContainer extends Component {
           />
         </ComponentTemplete>
 
-        
-
         <PropertyTable propertyTableList={this.propertyTableList}/>
       </MainTemplete>
     );
