@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import color from '../color'
 
 const Button = styled.button`
   border: 10px;
@@ -25,7 +26,7 @@ const Button = styled.button`
 `
 
 export const FlatStyle = styled(Button)`
-  ${props => props.theme.color[props.bsStyle]}
+  ${props => props.theme ? props.theme.color[props.icxStyle] : color[props.icxStyle].color}
   & > span {
     position: relative;
     padding-left: 16px;
@@ -38,11 +39,25 @@ export const FlatStyle = styled(Button)`
   &:hover {
     background-color: rgba(153,153,153,0.2)
   }
+
+  &:disabled,
+  &[disabled]{
+    cursor: not-allowed;
+  }
 `
 
 export const FloatStyle = styled(Button)`
-  ${props => props.theme.bg[props.bsStyle]}
-  color: ${props => props.bsStyle !== 'default' && '#fff'};
+  ${
+    props => props.theme ?
+    props.theme.bg[props.icxStyle] :
+    color[props.icxStyle].backgroundColor
+  }
+  color: ${props => props.icxStyle !== 'default' && '#fff'};
+
+  &:disabled,
+  &[disabled]{
+    cursor: not-allowed;
+  }
 `
 
 

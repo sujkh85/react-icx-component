@@ -5,6 +5,7 @@ import {QuerySwitch, QueryRoute} from '../library/queryrouter/';
 import IconStepContainer from './iconstep/IconStepContainer';
 import IconLoadingContainer from './iconloading/IconLoadingContainer';
 import IconShortNoticeContainer from './iconshortnotice/IconShortNoticeContainer';
+import IconCountDownContainer from './iconcountdown/IconCountDownContainer';
 class EtcRouter extends Component {
 	render() {
 		return (
@@ -13,6 +14,7 @@ class EtcRouter extends Component {
 				<QueryRoute path="etc/iconstep" exact component={IconStepContainer} />
 				<QueryRoute path="etc/iconloading" exact component={IconLoadingContainer} />
 				<QueryRoute path="etc/iconshortnotice" exact component={IconShortNoticeContainer} />
+				<QueryRoute path="etc/iconcountdown" exact component={IconCountDownContainer} />
 				<QueryRoute nomatch component={PageNotFound} />
 			</QuerySwitch>
 		);
