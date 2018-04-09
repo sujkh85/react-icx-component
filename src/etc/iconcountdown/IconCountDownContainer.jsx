@@ -28,7 +28,8 @@ class IconCountDownContainer extends Component {
     {name:'scheduleStartDate', type:'number', require:true, default:'',description:'시작시간'},
     {name:'scheduleEndDate', type:'number', require:true, default:'',description:'종료시간'},
     {name:'isActive', type:'bool', require:true, default:'true',description:'타이머를 활성화 시킬지 결정합니다.'},
-    {name:'isActive', type:'bool', require:true, default:'true',description:'타이머를 활성화 시킬지 결정합니다.'},
+    {name:'beforeTimeLabel', type:'object', require:false, default:'',description:'코드를 참고하세요.'},
+    {name:'afterTimeLabel', type:'object', require:false, default:'',description:'코드를 참고하세요.'},
   ]
 
   componentDidMount() {
