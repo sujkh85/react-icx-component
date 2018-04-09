@@ -6,6 +6,7 @@ import ComponentTemplete from '../../common/layout/ComponentTemplete';
 import Code from '../../common/Code';
 import PropertyTable from '../../common/PropertyTable';
 import IconShortNotice from './IconShortNotice';
+import { FloatButton } from '../../buttons'
 
 class IconLoadingContainer extends Component {
   importFromList=[
@@ -28,9 +29,10 @@ class IconLoadingContainer extends Component {
     {name:'label', type:'string', require:false, default:'', description:'출력할 노티문구'},
   ]
 
-  showLoading=(e)=>{
-    let target = e.target.getAttribute('target');
-    ShortNoticeController.show(target)
+  showLoading = (target) => {
+    console.log(target)
+    // let target = e.target.getAttribute('target');
+    // ShortNoticeController.show(target)
   }
 
   render() {
@@ -60,8 +62,10 @@ class IconLoadingContainer extends Component {
             <span style={{color:'blue'}}>아이디를 입력해주세요.2</span>
           </IconShortNotice>
           <br/><br/>
-          <button onClick={this.showLoading} style={{fontSize:15}} target="notice1">Click Me1</button> 
-          <button onClick={this.showLoading} style={{fontSize:15}} target="notice2">Click Me2</button> 
+          
+          <FloatButton onClick={() => ShortNoticeController.show('notice1')} label="Notice1"/>
+          <FloatButton onClick={() => ShortNoticeController.show('notice2')} label="Notice2"/>
+
         </ComponentTemplete>
         
         <PropertyTable propertyTableList={this.propertyTableList}/>
