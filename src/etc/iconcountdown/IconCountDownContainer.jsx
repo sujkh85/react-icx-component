@@ -1,23 +1,24 @@
 import React, { Component } from 'react';
-import IconStep from './IconStep';
+import moment from 'moment';
 import MainTemplete from '../../common/layout/MainTemplete';
 import ComponentTemplete from '../../common/layout/ComponentTemplete';
 import DescriptionTemplete from '../../common/layout/DescriptionTemplete';
 import Code from '../../common/Code';
 import PropertyTable from '../../common/PropertyTable';
+import IconCountDown from './IconCountDown'
+// import 
 
-class IconStepContainer extends Component {
+class IconCountDownContainer extends Component {
   importFromList=[
     {React:'react'},
-    {'{IconStep}':'react-icx-component'}
+    {'{IconCountDown}':'react-icx-component'}
   ]
-
+  //scheduleStartDate, scheduleEndDate
   libraryObject={
-    name:'IconStep',
+    name:'IconCountDown',
     param:[
-      {stepList:"{['step1', 'step2', 'step3']}"}, 
+      {scheduleStartDate:0}, 
       {descriptionList:"{['description1','description2','description3']}"},
-      {step:"{1}"}
     ],
   }
 
@@ -26,6 +27,10 @@ class IconStepContainer extends Component {
     {name:'descriptionList', type:'array', require:true, default:'[]',description:'해당스탭의 설명'},
     {name:'step', type:'number', require:true, default:'0',description:'스탭인덱스'},
   ]
+
+  componentDidMount() {
+    
+  }
 
   render() {
     return (
@@ -37,12 +42,10 @@ class IconStepContainer extends Component {
         </DescriptionTemplete>
 
         <ComponentTemplete>
-          <IconStep 
-            stepList={['step1', 'step2', 'step3']} 
-            descriptionList={['description1','description2','description3']} 
-            step={1}
-          />
+          <IconCountDown scheduleStartDate={1523250124972} scheduleEndDate={2523250124972}/>
         </ComponentTemplete>
+
+        
 
         <PropertyTable propertyTableList={this.propertyTableList}/>
       </MainTemplete>
@@ -50,4 +53,4 @@ class IconStepContainer extends Component {
   }
 }
 
-export default IconStepContainer;
+export default IconCountDownContainer;

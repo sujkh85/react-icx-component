@@ -43,6 +43,7 @@ class IconLoadingContainer extends Component {
           {'<button onClick={()=>{IconShortNoticeController.show("notice1")}}>Click Me1</buuton>'}<br/>
           {'<button onClick={()=>{IconShortNoticeController.show("notice2")}}>Click Me2</buuton>'}<br/>
         </Code>
+
         <DescriptionTemplete>
           react-short-notice를 사용하여고 디자인 작업만 입혔습니다.<br/>
           IconShortNotice컴포넌트를 예제처럼 설정하고 <br/>
@@ -50,13 +51,15 @@ class IconLoadingContainer extends Component {
           Click Me를 눌러보세요.
         </DescriptionTemplete>
 
-        <IconShortNotice id="notice1" timeout="2000" label="아이디를 입력해주세요.1" />
-
-        <IconShortNotice id="notice2" timeout="2000">
-          <span style={{color:'blue'}}>아이디를 입력해주세요.2</span>
-        </IconShortNotice>
+        
 
         <ComponentTemplete>
+          <IconShortNotice id="notice1" timeout="2000" label="아이디를 입력해주세요.1" />
+
+          <IconShortNotice id="notice2" timeout="2000">
+            <span style={{color:'blue'}}>아이디를 입력해주세요.2</span>
+          </IconShortNotice>
+          <br/><br/>
           <button onClick={this.showLoading} style={{fontSize:15}} target="notice1">Click Me1</button> 
           <button onClick={this.showLoading} style={{fontSize:15}} target="notice2">Click Me2</button> 
         </ComponentTemplete>
