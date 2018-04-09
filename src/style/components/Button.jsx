@@ -27,7 +27,6 @@ const Button = styled.button`
 
 export const FlatStyle = styled(Button)`
   ${props => {
-    console.log('props!!!!!', props)
     return color[props.icxStyle].color
   }}
   & > span {

@@ -6,7 +6,9 @@ class FlatButton extends Component {
 
   onClickButton = (e) => {
     const { onClick } = this.props
-    onClick()
+    if(onClick){
+      onClick(e)
+    }
   }
 
   render() {

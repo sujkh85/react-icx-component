@@ -41,7 +41,7 @@ class FloatButton extends Component {
     const {onClick} = this.props
     console.log(e.target)
     if(onClick){
-      onClick()
+      onClick(e)
     }
   }
 
