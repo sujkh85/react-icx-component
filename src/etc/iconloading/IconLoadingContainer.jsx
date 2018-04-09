@@ -34,6 +34,9 @@ class IconLoadingContainer extends Component {
   render() {
     return (
       <MainTemplete>
+        <DescriptionTemplete title="Wait Circle Component">
+          API호출시 대기 시간동안 보여주는 Wait Circle 컴포넌트
+        </DescriptionTemplete>
         <Code importFromList={this.importFromList} libraryObject={this.libraryObject}>
         </Code>
         <DescriptionTemplete>

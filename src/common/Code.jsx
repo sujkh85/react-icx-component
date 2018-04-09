@@ -12,7 +12,7 @@ class Code extends Component {
         let value = item[key]
         importRender.push(
           <div key={key}>
-            <span className="bold">import</span> {key} <span className="bold">from</span> <span className="red">'{value}'</span>;  
+            <span style={{fontWeight:'bold'}}>import</span> {key} <span style={{fontWeight:'bold'}}>from</span> <span style={{color:'red'}}>'{value}'</span>;  
           </div>
         )
       })
@@ -29,18 +29,18 @@ class Code extends Component {
     if(libraryObject){
       return(
         <div>
-          <span className="blue">{'<'}{libraryObject.name}</span> <br/>
+          <span style={{color:'blue'}}>{'<'}{libraryObject.name}</span> <br/>
             {libraryObject.param.map((item)=>{
               let key = Object.keys(item)[0]
               let value = item[key]
               return(
                 <div>
-                  &nbsp;&nbsp;<span className="blue">{key}=</span>
-                  <span className="red">{value}</span>
+                  &nbsp;&nbsp;<span style={{color:'blue'}}>{key}=</span>
+                  <span style={{color:'red'}}>{value}</span>
                 </div>
               )
             })}
-          <span className="blue">{'/>'}</span> 
+          <span style={{color:'blue'}}>{'/>'}</span> 
         </div>
       )
     }
@@ -60,29 +60,29 @@ class Code extends Component {
             splitArr.forEach((item)=>{
               let itemIndex = item.indexOf('=');
               if(itemIndex === -1){
-                childrenResultList.push(<span className="blue">{item+' '}</span>)
+                childrenResultList.push(<span style={{color:'blue'}}>{item+' '}</span>)
               }
               else{
                 let itemSubstring1 = item.substring(0, itemIndex+1)
                 let itemSubstring2 = item.substring(itemIndex+1, itemIndex+2)
                 let itemSubstring3 = item.substring(itemIndex+2, item.length)
 
-                childrenResultList.push(<span className="blue">{itemSubstring1}</span>)
-                childrenResultList.push(<span className="red">{itemSubstring2}</span>)
+                childrenResultList.push(<span style={{color:'blue'}}>{itemSubstring1}</span>)
+                childrenResultList.push(<span style={{color:'red'}}>{itemSubstring2}</span>)
 
                 if(itemSubstring2 === '"'){
                   let idx = itemSubstring3.indexOf('"')
                   let itemSubstring3Sub1 = itemSubstring3.substring(0, idx+1)
                   let itemSubstring3Sub2 = itemSubstring3.substring(idx+1, itemSubstring3.length)
-                  childrenResultList.push(<span className="red">{itemSubstring3Sub1}</span>)
-                  childrenResultList.push(<span className="blue">{itemSubstring3Sub2+ ' '}</span>)
+                  childrenResultList.push(<span style={{color:'red'}}>{itemSubstring3Sub1}</span>)
+                  childrenResultList.push(<span style={{color:'blue'}}>{itemSubstring3Sub2+ ' '}</span>)
                 }
                 else if(itemSubstring2 === '{'){
                   let idx = itemSubstring3.lastIndexOf('}')
                   let itemSubstring3Sub1 = itemSubstring3.substring(0, idx+1)
                   let itemSubstring3Sub2 = itemSubstring3.substring(idx+1, itemSubstring3.length)
-                  childrenResultList.push(<span className="red">{itemSubstring3Sub1}</span>)
-                  childrenResultList.push(<span className="blue">{itemSubstring3Sub2+ ' '}</span>)
+                  childrenResultList.push(<span style={{color:'red'}}>{itemSubstring3Sub1}</span>)
+                  childrenResultList.push(<span style={{color:'blue'}}>{itemSubstring3Sub2+ ' '}</span>)
                 }
               }
             })

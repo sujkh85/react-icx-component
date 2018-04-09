@@ -38,6 +38,9 @@ class IconCountDownContainer extends Component {
   render() {
     return (
       <MainTemplete>
+        <DescriptionTemplete title="Count Down Component">
+          카운트 다운 컴포넌트입니다.
+        </DescriptionTemplete>
         <Code importFromList={this.importFromList} >
           {'componentDidMount() {'}<br/>
           &nbsp;&nbsp;{'//1초에 한번씩 이벤트가 발생시켜 컴포넌트들에게 전달합니다.'}<br/>
