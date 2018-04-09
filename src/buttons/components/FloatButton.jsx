@@ -22,27 +22,33 @@ const FloatWrap = styled.div `
   min-width: 88px;
   margin: 12px;
 
-  /* &:hover {
-    background-color: rgba(255,255,255,.4)
-  } */
-
   & .inner {
     height: 36px;
     border-radius: 2px;
     transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
     top: 0px;
+    
+
     &:hover {
       background-color: rgba(255,255,255,.4)
     }
   }
 `
 
-class FlatButton extends Component {
+class FloatButton extends Component {
+
+  onClickButton = (e) => {
+    const {onClick} = this.props
+    console.log(e.target)
+    onClick()
+  }
+
   render() {
-    const { label, bsStyle } = this.props
+    const { label, icxStyle, disabled, target} = this.props
+    console.log(this.props)
     return (
       <FloatWrap>
-        <FloatStyle bsStyle={bsStyle}>
+        <FloatStyle icxStyle={icxStyle} onClick={this.onClickButton} disabled={disabled} target={target}>
           <div>
             <div className="inner">
               <span>{label}</span>
@@ -54,13 +60,17 @@ class FlatButton extends Component {
   }
 }
 
-FlatButton.propTypes = {
-  bsStyle: PropTypes.oneOf(['default', 'primary', 'secondary', 'disabled'])
+FloatButton.propTypes = {
+  icxStyle: PropTypes.oneOf(['default', 'primary', 'secondary', 'disabled']),
+  onClick: PropTypes.func,
+  label: PropTypes.string,
+  disabled: PropTypes.bool
 }
 
-FlatButton.defaultProps = {
-  bsStyle: 'default',
-  label: '버튼 텍스트'
+FloatButton.defaultProps = {
+  icxStyle: 'default',
+  label: '버튼 텍스트',
+  disabled: false
 }
 
-export default FlatButton;
+export default FloatButton;
