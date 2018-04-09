@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import styled from '.'
+import styled from 'styled-components'
 // import Clipboard from 'react-clipboard.js';
 
 class Code extends Component {
