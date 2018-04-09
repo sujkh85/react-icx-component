@@ -6,7 +6,7 @@ import DescriptionTemplete from '../../common/layout/DescriptionTemplete'
 import ComponentTemplete from '../../common/layout/ComponentTemplete';
 import Code from '../../common/Code';
 import PropertyTable from '../../common/PropertyTable';
-
+import {FloatButton} from '../../buttons'
 
 class IconLoadingContainer extends Component {
   importFromList=[
@@ -44,7 +44,7 @@ class IconLoadingContainer extends Component {
           <IconLoading isShow={true} label="잠시만 기달려주세요.<br/>처리중입니다."/>
         </ShortNoticeContainer>
         <ComponentTemplete>
-          <button onClick={this.showLoading} style={{fontSize:15}}>Click Me</button> 
+          <FloatButton onClick={this.showLoading} icxStyle="primary" label="Click Me" />
         </ComponentTemplete>
         
         <PropertyTable propertyTableList={this.propertyTableList}/>
