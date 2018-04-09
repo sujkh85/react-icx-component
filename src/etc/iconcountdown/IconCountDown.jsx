@@ -12,7 +12,7 @@ class IconCountDown extends Component {
       ...this.getBeforeTime(),
       scheduleStartDate:scheduleStartDate,
       scheduleEndDate:scheduleEndDate,
-      dateType:this.getDateType({scheduleStartDate, scheduleEndDate})
+      dateType:this.getDateType({scheduleStartDate, scheduleEndDate}),
     }
   }
 
@@ -32,41 +32,53 @@ class IconCountDown extends Component {
   }
 
   getBeforeTime=()=>{
-    return {
-      day:'--',
-      hour:'--',
-      minute:'--',
-      second:'--'
+    const {beforeTimeLabel} = this.props
+    if(beforeTimeLabel){
+      return beforeTimeLabel
+    }
+    else{
+      return {
+        day:'--',
+        hour:'--',
+        minute:'--',
+        second:'--'
+      }
     }
   }
 
   getAfterTime=()=>{
-    return {
-      day:'00',
-      hour:'00',
-      minute:'00',
-      second:'00'
+    const {afterTimeLabel} = this.props
+    if(afterTimeLabel){
+      return afterTimeLabel
+    }
+    else{
+      return {
+        day:'00',
+        hour:'00',
+        minute:'00',
+        second:'00'
+      }
     }
   }
 
   calculation=()=>{
     const {scheduleStartDate, scheduleEndDate} = this.state
-    const {contract} = this.props
+    const {isActive = false} = this.props
     let dateType = this.getDateType({scheduleStartDate, scheduleEndDate})
     switch (dateType) {
       case 'before':
-        if(contract.isActive === true){
+        if(isActive === true){
           this.runBefore()
         }
-        else if(contract.isActive === false){
+        else if(isActive === false){
           this.runFinish()
         }
         break;
       case 'in':
-        if(contract.isActive === true){
+        if(isActive === true){
           this.runIn()
         }
-        else if(contract.isActive === false){
+        else if(isActive === false){
           this.runFinish()
         }
         break;
