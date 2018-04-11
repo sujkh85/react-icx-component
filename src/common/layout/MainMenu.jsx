@@ -38,6 +38,8 @@ class MainMenu extends PureComponent {
         <MainMenuItem label="ShortNotice" route="etc/iconshortnotice" targetPageName={targetPageName} onClickMenu={this.onClickMenu}/>
         <MainMenuItem label="Buttons" route="button/button" targetPageName={targetPageName} onClickMenu={this.onClickMenu}/>
         <MainMenuItem label="CountDown" route="etc/iconcountdown" targetPageName={targetPageName} onClickMenu={this.onClickMenu}/>
+        <MainMenuItem label="DonutChart" route="chart/icondonut" targetPageName={targetPageName} onClickMenu={this.onClickMenu}/>
+        
       </MainMenuContainer>
     );
   }
