@@ -1,0 +1,52 @@
+.icon-contract-category {
+  display: block;
+  margin-top: 30px;
+  margin-left: 30px;
+  margin-bottom: 20px;
+  width: calc(100% - 60px);
+  font-size: 20px;
+  @include font-sub;
+  border-bottom: 2px solid #323232;
+  box-sizing: border-box;
+
+  .icon-contract-tab {
+      position: relative;
+      display: inline-block;
+      width: 190px;
+      color: #4c4c4c;
+      vertical-align: middle;
+      padding: 13px 0;
+      text-align: center;
+      cursor: pointer;
+      overflow: hidden;
+
+      &:hover {
+          font-weight: 600;
+      }
+
+      .isAfter {
+          opacity: 0;
+          display: block;
+          height: 4px;
+          color: #262626;
+          background-color: #323232;
+          margin: 4px auto;
+          position: absolute;
+          width: 100%;
+          left: 0;
+          bottom: -5px;
+          transform: translateY(5px);
+          content: '';
+          transition: all .2s;
+      }
+  }
+  .icon-contract-tab.on {
+      font-weight: 600;
+
+      .isAfter {
+          opacity: 1;
+          transform: translateY(0px);
+          transition: all .2s;
+      }
+  }
+}
