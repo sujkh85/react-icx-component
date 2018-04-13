@@ -16,7 +16,8 @@ class IconStepContainer extends Component {
     name:'IconTab',
     param:[
       {tabList:"{['Upcomming','Ongoing','Finished']}"}, 
-      {defaultSelectIndex:"{0}"}
+      {defaultSelectIndex:"{0}"},
+      {onClick:"{(e)=>{console.log(e.tab,e.index)}}"}
     ],
   }
 
