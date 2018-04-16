@@ -41,6 +41,8 @@ class MainMenu extends PureComponent {
         <MainMenuItem label="DonutChart" route="chart/icondonut" targetPageName={targetPageName} onClickMenu={this.onClickMenu}/>
         <MainMenuItem label="Tab" route="etc/icontab" targetPageName={targetPageName} onClickMenu={this.onClickMenu}/>
         <MainMenuItem label="MoreButton" route="etc/iconmorebutton" targetPageName={targetPageName} onClickMenu={this.onClickMenu}/>
+        <MainMenuItem label="ExcelWrite" route="util/excel" targetPageName={targetPageName} onClickMenu={this.onClickMenu}/>
+        
       </MainMenuContainer>
     );
   }
