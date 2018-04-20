@@ -40,12 +40,14 @@ class FloatButton extends Component {
   onClickButton = (e) => {
     const {onClick} = this.props
     console.log(e.target)
-    onClick()
+    if(onClick){
+      onClick(e)
+    }
   }
 
   render() {
-    const { label, icxStyle, disabled, target} = this.props
-    console.log(this.props)
+    const { label, icxStyle, disabled, target, } = this.props
+    
     return (
       <FloatWrap>
         <FloatStyle icxStyle={icxStyle} onClick={this.onClickButton} disabled={disabled} target={target}>
@@ -62,7 +64,6 @@ class FloatButton extends Component {
 
 FloatButton.propTypes = {
   icxStyle: PropTypes.oneOf(['default', 'primary', 'secondary', 'disabled']),
-  onClick: PropTypes.func,
   label: PropTypes.string,
   disabled: PropTypes.bool
 }

@@ -35,7 +35,10 @@ class IconLoadingContainer extends Component {
   render() {
     return (
       <MainTemplete>
-        <DescriptionTemplete title="Loading Components">
+        <DescriptionTemplete title="Wait Circle Component">
+          API호출시 대기 시간동안 보여주는 Wait Circle 컴포넌트
+        </DescriptionTemplete>
+        <DescriptionTemplete>
           api호출시 대기 시간동안 Loading을 보여줄때 사용합니다.<br/>
           Click Me를 눌러보세요.
         </DescriptionTemplete>

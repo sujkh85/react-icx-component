@@ -26,7 +26,9 @@ const Button = styled.button`
 `
 
 export const FlatStyle = styled(Button)`
-  ${props => props.theme ? props.theme.color[props.icxStyle] : color[props.icxStyle].color}
+  ${props => {
+    return color[props.icxStyle].color
+  }}
   & > span {
     position: relative;
     padding-left: 16px;

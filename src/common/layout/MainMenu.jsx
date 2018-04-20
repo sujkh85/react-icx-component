@@ -40,6 +40,11 @@ class MainMenu extends PureComponent {
         <MainMenuItem label="CountDown" route="etc/iconcountdown" targetPageName={targetPageName} onClickMenu={this.onClickMenu}/>
         <MainMenuItem label="Grid" route="grid/grid" targetPageName={targetPageName} onClickMenu={this.onClickMenu}/>
         <MainMenuItem label="Table" route="table/table" targetPageName={targetPageName} onClickMenu={this.onClickMenu}/>
+        <MainMenuItem label="DonutChart" route="chart/icondonut" targetPageName={targetPageName} onClickMenu={this.onClickMenu}/>
+        <MainMenuItem label="Tab" route="etc/icontab" targetPageName={targetPageName} onClickMenu={this.onClickMenu}/>
+        <MainMenuItem label="MoreButton" route="etc/iconmorebutton" targetPageName={targetPageName} onClickMenu={this.onClickMenu}/>
+        <MainMenuItem label="ExcelWrite" route="util/excel" targetPageName={targetPageName} onClickMenu={this.onClickMenu}/>
+        
       </MainMenuContainer>
     );
   }

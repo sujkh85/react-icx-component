@@ -7,6 +7,8 @@ import EtcContainer from '../etc/EtcContainer';
 import ButtonContainer from '../buttons/ButtonContainer';
 import GridContainer from '../grid/GridContainer';
 import TableContainer from '../table/TableContainer';
+import ChartContainer from '../chart/ChartContainer';
+import UtilContainer from '../util/UtilContainer';
 
 const ConfigRouter = (props) => {
 	return(
@@ -14,10 +16,12 @@ const ConfigRouter = (props) => {
 			<QueryRoute component={IntroContainer} />
       <QueryRoute path="intro" component={IntroContainer} />
 			<QueryRoute path="etc" component={EtcContainer} />
-			<QueryRoute path="/notconnect" component={PageNotConnect}/>
+			<QueryRoute path="chart" component={ChartContainer} />
 			<QueryRoute path="button" component={ButtonContainer} />
 			<QueryRoute path="grid" component={GridContainer} />
 			<QueryRoute path="table" component={TableContainer} />
+			<QueryRoute path="util" component={UtilContainer} />			
+			<QueryRoute path="/notconnect" component={PageNotConnect}/>
 			<QueryRoute nomatch component={PageNotFound}/>
 		</QuerySwitch>
 	)
