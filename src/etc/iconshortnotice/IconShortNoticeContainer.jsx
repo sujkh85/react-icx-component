@@ -7,6 +7,7 @@ import Code from '../../common/Code';
 import PropertyTable from '../../common/PropertyTable';
 import IconShortNotice from './IconShortNotice';
 import { FloatButton } from '../../buttons'
+import { Divider } from '../../style/components'
 
 class IconLoadingContainer extends Component {
   importFromList=[
@@ -38,33 +39,32 @@ class IconLoadingContainer extends Component {
   render() {
     return (
       <MainTemplete>
-        <Code importFromList={this.importFromList} libraryObject={this.libraryObject}>
-          {'<IconShortNotice id="notice2" timeout="2000">'}<br/>
-          &nbsp;&nbsp;{"<span style={{color:'blue'}}>아이디를 입력해주세요.2</span>"}<br/>
-          {'</IconShortNotice>'}<br/><br/>
-          {'<button onClick={()=>{IconShortNoticeController.show("notice1")}}>Click Me1</buuton>'}<br/>
-          {'<button onClick={()=>{IconShortNoticeController.show("notice2")}}>Click Me2</buuton>'}<br/>
-        </Code>
 
-        <DescriptionTemplete>
+        <DescriptionTemplete title="Short Notice Component">
           react-short-notice를 사용하여고 디자인 작업만 입혔습니다.<br/>
           IconShortNotice컴포넌트를 예제처럼 설정하고 <br/>
           IconShortNoticeController.show함수를 호출하여 노티를 띄울수있습니다.<br/>
           Click Me를 눌러보세요.
         </DescriptionTemplete>
-
-        
-
+ 
         <ComponentTemplete>
+          <Code importFromList={this.importFromList} libraryObject={this.libraryObject}>
+            {'<IconShortNotice id="notice2" timeout="2000">'}<br/>
+            &nbsp;&nbsp;{"<span style={{color:'blue'}}>아이디를 입력해주세요.2</span>"}<br/>
+            {'</IconShortNotice>'}<br/><br/>
+            {'<button onClick={()=>{IconShortNoticeController.show("notice1")}}>Click Me1</buuton>'}<br/>
+            {'<button onClick={()=>{IconShortNoticeController.show("notice2")}}>Click Me2</buuton>'}<br/>
+          </Code>
+          <Divider />
           <IconShortNotice id="notice1" timeout="2000" label="아이디를 입력해주세요.1" />
 
           <IconShortNotice id="notice2" timeout="2000">
             <span style={{color:'blue'}}>아이디를 입력해주세요.2</span>
           </IconShortNotice>
-          <br/><br/>
-          
-          <FloatButton onClick={() => ShortNoticeController.show('notice1')} label="Notice1"/>
-          <FloatButton onClick={() => ShortNoticeController.show('notice2')} label="Notice2"/>
+          <div>
+            <FloatButton onClick={() => ShortNoticeController.show('notice1')} label="Notice1"/>
+            <FloatButton onClick={() => ShortNoticeController.show('notice2')} label="Notice2"/>
+          </div>       
 
         </ComponentTemplete>
         

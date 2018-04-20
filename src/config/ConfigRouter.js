@@ -5,6 +5,8 @@ import {QuerySwitch, QueryRoute} from '../library/queryrouter/';
 import IntroContainer from '../intro/IntroContainer';
 import EtcContainer from '../etc/EtcContainer';
 import ButtonContainer from '../buttons/ButtonContainer';
+import GridContainer from '../grid/GridContainer';
+import TableContainer from '../table/TableContainer';
 
 const ConfigRouter = (props) => {
 	return(
@@ -14,6 +16,8 @@ const ConfigRouter = (props) => {
 			<QueryRoute path="etc" component={EtcContainer} />
 			<QueryRoute path="/notconnect" component={PageNotConnect}/>
 			<QueryRoute path="button" component={ButtonContainer} />
+			<QueryRoute path="grid" component={GridContainer} />
+			<QueryRoute path="table" component={TableContainer} />
 			<QueryRoute nomatch component={PageNotFound}/>
 		</QuerySwitch>
 	)

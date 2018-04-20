@@ -7,6 +7,7 @@ import ComponentTemplete from '../../common/layout/ComponentTemplete';
 import Code from '../../common/Code';
 import PropertyTable from '../../common/PropertyTable';
 import {FloatButton} from '../../buttons'
+import { Divider } from '../../style/components'
 
 class IconLoadingContainer extends Component {
   importFromList=[
@@ -34,9 +35,7 @@ class IconLoadingContainer extends Component {
   render() {
     return (
       <MainTemplete>
-        <Code importFromList={this.importFromList} libraryObject={this.libraryObject}>
-        </Code>
-        <DescriptionTemplete>
+        <DescriptionTemplete title="Loading Components">
           api호출시 대기 시간동안 Loading을 보여줄때 사용합니다.<br/>
           Click Me를 눌러보세요.
         </DescriptionTemplete>
@@ -44,6 +43,9 @@ class IconLoadingContainer extends Component {
           <IconLoading isShow={true} label="잠시만 기달려주세요.<br/>처리중입니다."/>
         </ShortNoticeContainer>
         <ComponentTemplete>
+          <Code importFromList={this.importFromList} libraryObject={this.libraryObject}>
+          </Code>
+          <Divider />
           <FloatButton onClick={this.showLoading} icxStyle="primary" label="Click Me" />
         </ComponentTemplete>
         

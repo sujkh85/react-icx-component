@@ -17,7 +17,9 @@ const theme = {
     primary: color.primary.backgroundColor,
     secondary: color.secondary.backgroundColor,
     disabled: color.disabled.backgroundColor,
-  }
+  },
+  ...fontSize,
+  ...spacing
 };
 
 export default theme

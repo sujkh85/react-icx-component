@@ -7,6 +7,7 @@ import Code from '../../common/Code';
 import PropertyTable from '../../common/PropertyTable';
 import IconCountDown from './IconCountDown';
 import IconCountDownController from './IconCountDownController';
+import { Divider } from '../../style/components'
 // import 
 
 class IconCountDownContainer extends Component {
@@ -38,27 +39,28 @@ class IconCountDownContainer extends Component {
   render() {
     return (
       <MainTemplete>
-        <Code importFromList={this.importFromList} >
-          {'componentDidMount() {'}<br/>
-          &nbsp;&nbsp;{'//1초에 한번씩 이벤트가 발생시켜 컴포넌트들에게 전달합니다.'}<br/>
-          &nbsp;&nbsp;IconCountDownController.on()<br/>
-          &nbsp;&nbsp;{'//controller가 동작여부를 반환합니다.'}<br/>
-          &nbsp;&nbsp;{'//IconCountDownController.getIsOn()'}<br/>
-          &nbsp;&nbsp;{'//이벤트발생을 종료시킵니다.'}<br/>
-          &nbsp;&nbsp;{'//IconCountDownController.off()'}<br/>
-          {'}'}<br/><br/>
-          
-          {"<IconCountDown scheduleStartDate={1523250124972} scheduleEndDate={1573250124972} isActive={true}/>"}<br/>
-          {"<IconCountDown scheduleStartDate={1523250124972} scheduleEndDate={1573250124972} isActive={false}/>"}<br/>
-          {"<IconCountDown scheduleStartDate={1573250124972} scheduleEndDate={1623250124972} isActive={true}/>"}<br/>
-          {"<IconCountDown scheduleStartDate={1573250124972} scheduleEndDate={1623250124972} isActive={true} beforeTimeLabel={{day:'**',hour:'**',minute:'**',second:'**'}}/>"}<br/>
-          {"<IconCountDown scheduleStartDate={1573250124972} scheduleEndDate={1623250124972} isActive={true} afterTimeLabel={{day:'XX',hour:'XX',minute:'XX',second:'XX'}}/>"}<br/>
-        </Code>       
-        <DescriptionTemplete>
+        <DescriptionTemplete title="CountDown Component">
           scheduleStartDate 포맷은 unix time ms입니다.
         </DescriptionTemplete>
 
         <ComponentTemplete>
+          <Code importFromList={this.importFromList} >
+            {'componentDidMount() {'}<br/>
+            &nbsp;&nbsp;{'//1초에 한번씩 이벤트가 발생시켜 컴포넌트들에게 전달합니다.'}<br/>
+            &nbsp;&nbsp;IconCountDownController.on()<br/>
+            &nbsp;&nbsp;{'//controller가 동작여부를 반환합니다.'}<br/>
+            &nbsp;&nbsp;{'//IconCountDownController.getIsOn()'}<br/>
+            &nbsp;&nbsp;{'//이벤트발생을 종료시킵니다.'}<br/>
+            &nbsp;&nbsp;{'//IconCountDownController.off()'}<br/>
+            {'}'}<br/><br/>
+            
+            {"<IconCountDown scheduleStartDate={1523250124972} scheduleEndDate={1573250124972} isActive={true}/>"}<br/>
+            {"<IconCountDown scheduleStartDate={1523250124972} scheduleEndDate={1573250124972} isActive={false}/>"}<br/>
+            {"<IconCountDown scheduleStartDate={1573250124972} scheduleEndDate={1623250124972} isActive={true}/>"}<br/>
+            {"<IconCountDown scheduleStartDate={1573250124972} scheduleEndDate={1623250124972} isActive={true} beforeTimeLabel={{day:'**',hour:'**',minute:'**',second:'**'}}/>"}<br/>
+            {"<IconCountDown scheduleStartDate={1573250124972} scheduleEndDate={1623250124972} isActive={true} afterTimeLabel={{day:'XX',hour:'XX',minute:'XX',second:'XX'}}/>"}<br/>
+          </Code>  
+          <Divider />     
           <IconCountDown scheduleStartDate={1523250124972} scheduleEndDate={1573250124972} isActive={true}/>
           <IconCountDown scheduleStartDate={1523250124972} scheduleEndDate={1573250124972} isActive={false}/>
           <IconCountDown scheduleStartDate={1573250124972} scheduleEndDate={1623250124972} isActive={true} />
