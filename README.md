@@ -1,3 +1,5 @@
+[DEMO](https://sujkh85.github.io/react-icx-component/)
+
 # REACT-ICX-COMPONENT
 
 React icx component is ui library
@@ -13,6 +15,7 @@ I will delete it if I have a problem.
 Please contact me if you have any problems.(wjdrudghks85@gmail.com)
 
 ## INSTALL
+
 ```
   git clone https://github.com/sujkh85/react-icx-component.git
   npm install
@@ -29,5 +32,3 @@ Please contact me if you have any problems.(wjdrudghks85@gmail.com)
 ```
   npm run build
 ```
-
-
